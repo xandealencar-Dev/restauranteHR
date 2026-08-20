@@ -77,6 +77,14 @@ nav a:hover {
     font-size: 22px;
 }
 
+.foto-restaurante {
+    display: block;
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+    margin: 20px auto;
+}
+
 .prato p {
     font-size: 16px;
     line-height: 1.5;
