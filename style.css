@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f0;
+    color: #333;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #2b2118;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #d9a441;
+}
+
+/* ÁREA PRINCIPAL */
+
+.inicio {
+    background-color: #d9a441;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.inicio h2 {
+    color: white;
+    font-size: 38px;
+    margin: 10px;
+}
+
+.inicio p {
+    color: white;
+    font-size: 19px;
+}
+
+/* TÍTULOS */
+
+.titulo1 {
+    color: #8b4513;
+    text-align: center;
+}
+
+/* PRATOS */
+
+.prato {
+    background-color: white;
+    width: 300px;
+    margin: 25px auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #d0d0d0;
+}
+
+.prato h3 {
+    color: #8b4513;
+    font-size: 22px;
+}
+
+.prato p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.preco {
+    color: #8b4513;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* BOTÃO */
+
+.botao {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #a85d25;
+}
+
+/* TEXTO */
+
+.texto {
+    background-color: white;
+    width: 70%;
+    margin: 40px auto;
+    padding: 35px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #d0d0d0;
+}
+
+.texto p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+
+footer {
+    background-color: #2b2118;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
