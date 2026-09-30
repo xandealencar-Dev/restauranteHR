@@ -1,21 +1,22 @@
-const botoes = document.querySelectorAll(".botao");
+console.log("JavaScript funcionando!");
+
+const botoesComprar = document.querySelectorAll(".botao");
 const itensCarrinho = document.querySelector("#itens-carrinho");
 const totalCarrinho = document.querySelector("#total-carrinho");
 const carrinho = [];
 
-botoes.forEach(function(botao) {
+botoesComprar.forEach(function(botao) {
     botao.addEventListener("click", function() {
         const prato = botao.closest(".prato");
-        const nome = prato.querySelector("h3").textContent;
-        const precoTexto = prato.querySelector(".preco").textContent;
-        const preco = Number(precoTexto.replace("R$", "").replace(",", ".").trim());
+        const nome = prato.querySelector("h3").textContent.trim();
+        const preco = prato.querySelector(".preco").textContent.trim();
 
-        const produto = carrinho.find(function(item) {
-            return item.nome === nome;
+        const produtoExistente = carrinho.find(function(produto) {
+            return produto.nome === nome;
         });
 
-        if (produto) {
-            produto.quantidade++;
+        if (produtoExistente) {
+            produtoExistente.quantidade++;
         } else {
             carrinho.push({
                 nome: nome,
@@ -33,12 +34,16 @@ function atualizarCarrinho() {
     let total = 0;
 
     carrinho.forEach(function(produto, indice) {
-        total += produto.preco * produto.quantidade;
+        const precoNumero = Number(
+            produto.preco.replace("R$", "").replace(".", "").replace(",", ".").trim()
+        );
+
+        total += precoNumero * produto.quantidade;
 
         itensCarrinho.innerHTML += `
             <div class="item-carrinho">
                 <h3>${produto.nome}</h3>
-                <p>R$ ${produto.preco.toFixed(2).replace(".", ",")}</p>
+                <p>${produto.preco}</p>
                 <div class="controle-quantidade">
                     <button class="diminuir" data-indice="${indice}">-</button>
                     <span>${produto.quantidade}</span>
@@ -48,7 +53,7 @@ function atualizarCarrinho() {
         `;
     });
 
-    totalCarrinho.textContent = `Total: R$ ${total.toFixed(2).replace(".", ",")}`;
+    totalCarrinho.textContent = Total: R$ ${total.toFixed(2).replace(".", ",")};
 
     document.querySelectorAll(".aumentar").forEach(function(botao) {
         botao.addEventListener("click", function() {
